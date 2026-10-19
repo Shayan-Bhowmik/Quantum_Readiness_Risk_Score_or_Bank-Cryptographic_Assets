@@ -1,1 +1,3 @@
 doc folder/
+.venv/
+.env
