@@ -1,7 +1,14 @@
-import streamlit as st
-import pandas as pd
+import sys
 import os
 from datetime import datetime, timezone
+import streamlit as st
+import pandas as pd
+
+# Ensure project root is in sys.path for robust imports across all multi-page modules
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..")))
+
+from app.logic.sas_connector import run_scoring_pipeline
+from app.logic.scoring import calculate_single_risk_score
 
 # Configure Page
 st.set_page_config(
@@ -46,6 +53,9 @@ if "assets_df" not in st.session_state:
     else:
         st.session_state.assets_df = pd.DataFrame(columns=REQUIRED_COLUMNS + ["created_at", "updated_at"])
 
+if "scoring_status" not in st.session_state:
+    st.session_state.scoring_status = None
+
 st.markdown('<div class="page-title">Cryptographic Asset Inventory</div>', unsafe_allow_html=True)
 st.markdown('<p class="text-muted">Upload existing bank asset inventories (CSV) or manually register new cryptographic assets.</p>', unsafe_allow_html=True)
 
@@ -80,12 +90,34 @@ with tab_inventory:
                     st.error(f"Invalid row values detected: Unauthorized data_sensitivity values: {', '.join(map(str, invalid_sens))}")
                 else:
                     st.session_state.assets_df = uploaded_df
+                    st.session_state.scoring_status = None
                     st.success(f"Successfully loaded {len(uploaded_df)} cryptographic assets from uploaded file.")
         except Exception as e:
             st.error(f"File Parsing Error: Unable to parse CSV file. Detail: {str(e)}")
 
     st.markdown("---")
-    st.markdown('<div class="section-title">Current Asset Inventory</div>', unsafe_allow_html=True)
+    
+    # Action Header: Title + Run Scoring Button
+    head_col1, head_col2 = st.columns([3, 1])
+    with head_col1:
+        st.markdown('<div class="section-title">Current Asset Inventory</div>', unsafe_allow_html=True)
+    with head_col2:
+        if st.button("⚡ Run Scoring Engine", use_container_width=True):
+            if not st.session_state.assets_df.empty:
+                with st.spinner("Executing Risk Scoring Engine..."):
+                    scored_df, metadata = run_scoring_pipeline(st.session_state.assets_df)
+                    st.session_state.assets_df = scored_df
+                    st.session_state.scoring_status = metadata
+            else:
+                st.warning("Empty Inventory: Upload assets before scoring.")
+
+    # Status Banner for Scoring
+    if st.session_state.scoring_status:
+        meta = st.session_state.scoring_status
+        if meta["status"] == "SUCCESS":
+            st.success(f"{meta['message']} (Latency: {meta['latency_seconds']}s)")
+        else:
+            st.warning(f"{meta['message']} (Execution time: {meta['latency_seconds']}s)")
     
     df = st.session_state.assets_df
     if df.empty:
@@ -158,15 +190,13 @@ with tab_manual:
             if not form_asset_name.strip():
                 st.error("Validation Error: Asset Name is required.")
             else:
-                # Compute risk score (0 - 100)
-                sens_map = {"Low": 1, "Medium": 2, "High": 3, "Critical": 4}
-                s_val = sens_map[form_sensitivity]
-                time_urgency = max(0.1, 15.0 - form_years_to_break)
-                computed_risk = round(min(100.0, max(0.0, (s_val * 15.0) + (time_urgency * 2.5) + (form_cost_score * 1.5))), 1)
+                score_res = calculate_single_risk_score(
+                    data_sensitivity=form_sensitivity,
+                    estimated_years_to_break=form_years_to_break,
+                    migration_cost_score=form_cost_score
+                )
 
-                phase = "Phase 1" if computed_risk >= 75.0 else ("Phase 2" if computed_risk >= 50.0 else "Phase 3")
                 now_iso = datetime.now(timezone.utc).isoformat()
-                
                 new_id = (st.session_state.assets_df["asset_id"].max() + 1) if not st.session_state.assets_df.empty else 1
 
                 new_row = {
@@ -178,13 +208,13 @@ with tab_manual:
                     "data_sensitivity": form_sensitivity,
                     "estimated_years_to_break": float(form_years_to_break),
                     "migration_cost_score": float(form_cost_score),
-                    "risk_score": computed_risk,
-                    "migration_phase": phase,
+                    "risk_score": score_res["risk_score"],
+                    "migration_phase": score_res["migration_phase"],
                     "recommended_pqc_algorithm": form_pqc,
                     "created_at": now_iso,
                     "updated_at": now_iso,
                 }
 
                 st.session_state.assets_df = pd.concat([st.session_state.assets_df, pd.DataFrame([new_row])], ignore_index=True)
-                st.success(f"Asset '{form_asset_name}' registered successfully! Assigned Risk Score: {computed_risk} ({phase}).")
+                st.success(f"Asset '{form_asset_name}' registered successfully! Assigned Risk Score: {score_res['risk_score']} ({score_res['migration_phase']}).")
                 st.rerun()
