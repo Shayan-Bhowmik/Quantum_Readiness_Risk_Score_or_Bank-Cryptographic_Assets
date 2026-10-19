@@ -1,0 +1,17 @@
+legacy_algorithm,recommended_pqc_algorithm,standard_reference,notes
+RSA-1024,CRYSTALS-Dilithium (ML-DSA),FIPS 204,Immediate deprecation; transition to lattice-based digital signatures
+RSA-2048,CRYSTALS-Dilithium (ML-DSA),FIPS 204,Standard banking signature migration target
+RSA-3072,CRYSTALS-Dilithium (ML-DSA),FIPS 204,High-security banking signature migration target
+RSA-4096,CRYSTALS-Dilithium (ML-DSA),FIPS 204,Root CA long-term transition target
+ECC-160,CRYSTALS-Kyber (ML-KEM),FIPS 203,Legacy curve; replace with lattice-based key encapsulation
+ECC-224,CRYSTALS-Kyber (ML-KEM),FIPS 203,High vulnerability; migrate to ML-KEM
+ECC-256,CRYSTALS-Kyber (ML-KEM),FIPS 203,Primary banking TLS & key-exchange migration target
+ECC-384,CRYSTALS-Kyber (ML-KEM),FIPS 203,High-grade banking key-exchange migration target
+ECC-521,CRYSTALS-Kyber (ML-KEM),FIPS 203,Maximum security key-exchange migration target
+DSA-1024,SPHINCS+ (SLH-DSA),FIPS 205,Stateless hash-based signature alternative
+DSA-2048,SPHINCS+ (SLH-DSA),FIPS 205,Stateless hash-based signature alternative
+DIFFIE-HELLMAN-1024,CRYSTALS-Kyber (ML-KEM),FIPS 203,Key agreement protocol migration
+DIFFIE-HELLMAN-2048,CRYSTALS-Kyber (ML-KEM),FIPS 203,Key agreement protocol migration
+AES-128,AES-256,NIST SP 800-38A,Quantum-resistant symmetric cipher; double key size against Grover's algorithm
+AES-192,AES-256,NIST SP 800-38A,Increase key size to 256 bits for full quantum margin
+AES-256,AES-256,NIST SP 800-38A,Already quantum-safe against Grover search
