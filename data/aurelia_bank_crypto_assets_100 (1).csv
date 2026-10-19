@@ -1,0 +1,101 @@
+asset_id,asset_name,system_category,algorithm,key_size_bits,data_sensitivity,estimated_years_to_break,migration_cost_score,risk_score,migration_phase,recommended_pqc_algorithm,created_at,updated_at
+1,Fraud Detection Service TLS Certificate,Card Network,ECC,256,High,7.7,4.6,14.48,Phase 3,ML-DSA-65,2026-08-10 14:48:18,2026-08-29 13:31:41
+2,Merchant Acquiring Gateway Certificate,Card Network,RSA,2048,High,7.6,6.4,20.87,Phase 3,ML-DSA-65,2025-01-06 21:01:09,2026-08-04 13:15:06
+3,Card Tokenization Encryption Key,Card Network,RSA,2048,Critical,6.6,8.7,44.75,Phase 2,ML-KEM-1024,2024-12-18 05:27:39,2024-12-18 05:27:39
+4,EMV Issuer Master Signing Key,Card Network,RSA,2048,Critical,7.3,9.4,43.69,Phase 2,ML-DSA-87,2026-02-04 12:14:19,2026-02-15 18:21:11
+5,SWIFT Monitoring Agent Mutual TLS Key,SWIFT,ECC,256,Medium,7.6,2.6,4.85,Phase 3,ML-DSA-65,2024-02-13 09:34:10,2026-02-15 23:57:18
+6,SWIFT MT202 Cover Payment Signing Key,SWIFT,RSA,2048,Critical,7.9,9.0,38.53,Phase 3,ML-DSA-87,2025-02-06 14:43:14,2025-02-06 14:43:14
+7,SWIFT Correspondent Bank Key Exchange Key,SWIFT,RSA,1024,Critical,4.6,8.6,63.94,Phase 2,ML-KEM-1024,2026-07-29 01:13:05,2026-09-10 11:20:02
+8,Intranet Admin Console Certificate,Internal PKI,RSA,1024,Medium,3.9,3.1,12.72,Phase 3,ML-DSA-65,2025-06-26 23:02:14,2026-04-06 04:20:34
+9,ATM Network Mutual TLS Key,Card Network,RSA,2048,High,8.2,6.7,20.21,Phase 3,ML-DSA-65,2024-05-05 02:40:44,2024-05-05 02:40:44
+10,SWIFT Test Environment Signing Key,SWIFT,RSA,2048,Low,6.2,2.1,1.84,Phase 3,ML-DSA-65,2024-12-18 09:25:31,2025-09-06 17:18:29
+11,Privileged Access Vault Encryption Key,Internal PKI,RSA,4096,Critical,10.2,8.0,26.18,Phase 3,ML-KEM-1024,2024-11-13 11:35:28,2026-03-02 11:42:07
+12,SWIFT Liquidity Forecast Feed Key,SWIFT,RSA,2048,Medium,8.5,4.8,8.72,Phase 3,ML-KEM-768,2024-01-03 23:08:49,2025-06-21 08:39:13
+13,Data Warehouse Encryption Key,Internal PKI,RSA,4096,High,14.2,6.9,11.57,Phase 3,ML-KEM-768,2026-09-26 01:44:23,2026-09-26 01:44:23
+14,SWIFT Webhook Receiver Certificate,SWIFT,ECC,256,Medium,6.2,2.5,5.91,Phase 3,ML-DSA-65,2024-07-05 06:19:52,2025-05-10 21:29:49
+15,SWIFT Nostro Reconciliation Signing Key,SWIFT,RSA,2048,High,7.3,6.0,20.34,Phase 3,ML-DSA-65,2026-01-12 14:21:08,2026-06-30 02:49:37
+16,Cardholder Statement Delivery Certificate,Card Network,ECC,256,Low,7.7,2.0,1.15,Phase 3,ML-DSA-65,2026-09-14 17:54:58,2026-10-04 04:25:46
+17,Treasury Workstation Client Certificate,Internal PKI,RSA,1024,High,4.0,5.6,35.42,Phase 3,ML-DSA-65,2025-09-06 21:55:43,2025-11-11 20:56:17
+18,SWIFT Operator Smartcard Root Certificate,SWIFT,RSA,4096,Critical,10.5,8.8,28.05,Phase 3,ML-DSA-87,2024-09-03 18:34:58,2024-09-03 18:34:58
+19,Database Backup Encryption Key,Internal PKI,RSA,2048,High,5.9,6.0,25.43,Phase 3,ML-KEM-768,2024-07-16 08:20:01,2024-07-16 08:20:01
+20,Branch Office Router Certificate,Internal PKI,RSA,1024,Low,3.8,3.3,6.45,Phase 3,ML-DSA-65,2026-07-06 19:04:44,2026-09-23 02:21:52
+21,ATM Firmware Update Signing Key,Card Network,RSA,2048,High,8.0,6.8,21.07,Phase 3,ML-DSA-65,2024-08-15 01:46:23,2026-08-21 23:04:52
+22,Card Personalization Bureau Transport Key,Card Network,RSA,4096,Critical,13.3,8.4,20.87,Phase 3,ML-KEM-1024,2025-06-28 08:08:20,2025-06-28 08:08:20
+23,Card Dispute Evidence Archive Key,Card Network,RSA,2048,Medium,7.7,3.8,7.48,Phase 3,ML-KEM-768,2026-05-01 17:34:02,2026-05-01 17:34:02
+24,Chargeback Dispute API Certificate,Card Network,ECC,256,Medium,8.4,3.2,5.52,Phase 3,ML-DSA-65,2024-01-23 03:00:54,2024-06-30 18:38:05
+25,SWIFT Disaster Recovery Gateway Certificate,SWIFT,RSA,2048,High,6.7,6.5,24.21,Phase 3,ML-DSA-65,2026-03-29 00:21:51,2026-04-25 01:19:10
+26,Merchant Onboarding Service Certificate,Card Network,ECC,256,Low,8.6,2.3,1.22,Phase 3,ML-DSA-65,2025-11-04 21:35:16,2026-01-19 13:18:21
+27,SWIFT FileAct Bulk Transfer Encryption Key,SWIFT,RSA,4096,High,11.1,7.0,15.35,Phase 3,ML-KEM-768,2024-11-23 20:13:43,2024-11-23 20:13:43
+28,SWIFT MX pacs.008 Signing Key,SWIFT,ECC,384,Critical,9.1,8.3,30.63,Phase 3,ML-DSA-87,2024-11-26 13:00:20,2025-06-01 08:59:05
+29,Contactless Payment Cryptogram Key,Card Network,ECC,384,Critical,10.1,8.2,27.14,Phase 3,ML-DSA-87,2026-06-29 23:57:44,2026-09-19 08:42:08
+30,Card Network Clearing Signing Key,Card Network,RSA,4096,High,12.8,7.3,13.78,Phase 3,ML-DSA-65,2024-07-22 14:46:51,2024-07-22 14:46:51
+31,Debit Switch Message Signing Key,Card Network,RSA,1024,High,3.6,7.5,53.25,Phase 2,ML-DSA-65,2025-07-03 14:01:27,2026-09-29 16:26:00
+32,SWIFT gpi Tracker API Certificate,SWIFT,ECC,256,High,7.1,5.4,18.74,Phase 3,ML-DSA-65,2026-03-13 18:14:25,2026-09-24 13:56:50
+33,Internal Time Stamping Authority Key,Internal PKI,ECC,384,Medium,13.1,3.8,3.94,Phase 3,ML-DSA-65,2024-07-22 03:12:27,2026-09-23 05:46:47
+34,Card Reissue Batch Encryption Key,Card Network,RSA,2048,Medium,6.4,4.6,11.40,Phase 3,ML-KEM-768,2024-01-30 01:22:04,2024-11-09 12:07:28
+35,Message Queue Broker TLS Key,Internal PKI,ECC,256,Medium,7.1,3.0,6.25,Phase 3,ML-DSA-65,2026-08-03 08:33:41,2026-08-03 08:33:41
+36,Customer Support CRM TLS Certificate,Internal PKI,ECC,256,Low,7.3,2.1,1.40,Phase 3,ML-DSA-65,2024-08-20 17:02:29,2024-08-20 17:02:29
+37,SWIFT Customer Onboarding Portal Certificate,SWIFT,ECC,256,Low,7.2,2.2,1.55,Phase 3,ML-DSA-65,2026-01-05 13:05:45,2026-02-21 06:42:51
+38,3-D Secure Directory Server Certificate,Card Network,RSA,2048,High,6.9,6.1,21.96,Phase 3,ML-DSA-65,2026-05-14 10:54:54,2026-05-14 10:54:54
+39,Regulatory Reporting Archive Key,Internal PKI,RSA,2048,Medium,8.7,4.3,7.49,Phase 3,ML-KEM-768,2026-03-16 05:26:26,2026-09-19 14:32:43
+40,SWIFT Backup Gateway Signing Key,SWIFT,RSA,2048,High,7.9,6.9,21.68,Phase 3,ML-DSA-65,2024-06-13 20:02:44,2024-09-10 02:32:40
+41,Settlement File Encryption Key,Card Network,RSA,1024,High,3.8,6.3,42.15,Phase 2,ML-KEM-768,2025-01-21 00:32:23,2025-01-21 00:32:23
+42,Virtual Card Issuance Encryption Key,Card Network,ECC,384,High,12.5,4.9,9.12,Phase 3,ML-KEM-768,2024-03-06 13:17:19,2026-05-04 06:14:17
+43,Backup Tape Vault Encryption Key,Internal PKI,RSA,2048,Medium,6.4,4.6,11.40,Phase 3,ML-KEM-768,2025-12-03 10:20:25,2026-09-24 13:59:23
+44,Developer Build Server Signing Key,Internal PKI,RSA,2048,Medium,6.4,3.5,8.41,Phase 3,ML-DSA-65,2024-04-08 10:33:41,2026-06-02 18:56:53
+45,Email Gateway S/MIME Certificate Authority,Internal PKI,RSA,2048,Medium,6.2,4.4,11.24,Phase 3,ML-DSA-65,2026-07-30 14:27:02,2026-10-05 20:37:50
+46,Payment Gateway Mutual TLS Certificate,Card Network,ECC,384,High,11.0,5.2,11.23,Phase 3,ML-DSA-65,2025-03-06 14:13:33,2026-04-24 19:23:12
+47,Internal Root CA,Internal PKI,RSA,4096,Critical,14.8,9.1,20.29,Phase 3,ML-DSA-87,2026-01-12 14:29:08,2026-04-18 18:48:17
+48,Internal API Gateway TLS Key,Internal PKI,ECC,256,Medium,8.0,3.4,6.29,Phase 3,ML-DSA-65,2026-03-23 18:40:10,2026-07-02 14:14:41
+49,Service Mesh Mutual TLS Root,Internal PKI,ECC,384,Medium,10.6,4.0,5.46,Phase 3,ML-DSA-65,2026-05-19 04:11:11,2026-06-27 12:19:02
+50,SWIFT FIN Interface HSM Wrapping Key,SWIFT,RSA,1024,Critical,3.9,9.2,80.96,Phase 1,ML-KEM-1024,2025-11-26 05:03:41,2025-11-26 05:03:41
+51,Test Lab Certificate Authority,Internal PKI,RSA,2048,Low,6.9,1.5,0.79,Phase 3,ML-DSA-65,2024-07-07 22:23:42,2025-11-10 18:58:32
+52,POS Terminal Key Injection Certificate,Card Network,RSA,1024,High,4.0,6.6,41.95,Phase 2,ML-DSA-65,2024-04-22 16:42:52,2026-02-17 02:20:16
+53,Internal Monitoring Dashboard Certificate,Internal PKI,ECC,384,Low,12.6,1.6,0.00,Phase 3,ML-DSA-65,2024-04-23 14:08:23,2024-04-23 14:08:23
+54,Internal Wiki TLS Certificate,Internal PKI,ECC,256,Low,8.0,1.4,0.42,Phase 3,ML-DSA-65,2025-04-15 08:27:33,2025-08-13 07:33:10
+55,ATM Transaction Signing Key,Card Network,RSA,1024,Critical,3.2,8.0,85.87,Phase 1,ML-DSA-87,2026-09-26 13:51:10,2026-09-28 07:29:54
+56,SWIFT Sanctions Screening Feed TLS Key,SWIFT,ECC,384,High,10.8,5.0,10.97,Phase 3,ML-DSA-65,2025-01-28 04:32:38,2026-01-26 11:46:18
+57,Device Management Enrollment CA,Internal PKI,RSA,2048,Medium,7.4,4.9,10.41,Phase 3,ML-DSA-65,2024-12-07 02:49:39,2025-02-18 05:27:10
+58,Single Sign-On Token Signing Key,Internal PKI,ECC,256,High,6.0,4.7,19.33,Phase 3,ML-DSA-65,2025-09-10 16:05:32,2026-01-15 02:48:50
+59,Log Aggregation Pipeline TLS Key,Internal PKI,ECC,256,Low,8.3,2.4,1.41,Phase 3,ML-DSA-65,2024-12-13 12:35:39,2024-12-13 12:35:39
+60,SWIFT Gateway TLS Certificate,SWIFT,RSA,1024,High,3.2,6.2,49.45,Phase 2,ML-DSA-65,2025-11-01 08:17:57,2026-04-07 04:04:43
+61,Payment Processing Signing Key,Card Network,RSA,1024,High,3.7,7.2,49.67,Phase 2,ML-DSA-65,2025-06-10 19:09:58,2026-03-14 18:56:51
+62,SWIFT Customer Statement MT940 Encryption Key,SWIFT,ECC,256,Medium,5.8,4.0,10.89,Phase 3,ML-KEM-768,2025-05-09 19:29:38,2025-05-09 19:29:38
+63,Kubernetes Cluster API Certificate,Internal PKI,ECC,384,Medium,10.1,3.7,5.27,Phase 3,ML-DSA-65,2025-07-22 11:41:55,2025-07-22 11:41:55
+64,SWIFT Message Integrity HSM Key,SWIFT,RSA,4096,Critical,15.2,9.5,20.64,Phase 3,ML-DSA-87,2026-05-10 16:29:25,2026-09-24 05:24:47
+65,Dynamic CVV Generation Key,Card Network,RSA,4096,Critical,10.0,8.5,28.47,Phase 3,ML-KEM-1024,2024-01-29 02:08:42,2026-04-11 21:28:38
+66,SWIFT Operator Console Session Encryption Key,SWIFT,ECC,384,High,10.4,4.4,9.93,Phase 3,ML-KEM-768,2026-08-27 05:41:14,2026-08-30 08:35:29
+67,SWIFT Alliance Lite Client Certificate,SWIFT,RSA,1024,High,3.1,4.3,35.09,Phase 3,ML-DSA-65,2024-06-24 07:21:04,2025-06-14 08:27:22
+68,SWIFT Compliance Reporting TLS Key,SWIFT,RSA,2048,Medium,6.3,3.6,8.84,Phase 3,ML-DSA-65,2024-06-11 18:27:59,2024-06-11 18:27:59
+69,SWIFT Relationship Management Authenticator Key,SWIFT,RSA,1024,High,3.9,7.1,46.40,Phase 2,ML-DSA-65,2025-02-26 09:55:46,2025-02-26 09:55:46
+70,Code Signing Certificate Authority,Internal PKI,RSA,2048,High,9.7,6.4,16.11,Phase 3,ML-DSA-65,2024-10-09 00:43:35,2025-01-17 15:49:01
+71,Card Activation Service TLS Key,Card Network,ECC,256,Medium,7.0,2.9,6.10,Phase 3,ML-DSA-65,2025-10-17 22:46:36,2026-07-07 11:18:27
+72,SWIFT Interact Store-and-Forward Encryption Key,SWIFT,RSA,2048,High,8.5,7.4,21.61,Phase 3,ML-KEM-768,2025-02-05 17:38:34,2026-03-29 12:34:15
+73,VPN Gateway Certificate,Internal PKI,RSA,2048,Medium,8.5,4.5,8.10,Phase 3,ML-DSA-65,2026-03-10 16:29:13,2026-07-15 16:47:59
+74,Card Controls API Certificate,Card Network,ECC,256,Medium,6.2,3.0,7.31,Phase 3,ML-DSA-65,2024-05-18 23:23:34,2025-02-27 18:57:13
+75,Secrets Manager Master Encryption Key,Internal PKI,ECC,384,Critical,12.2,7.8,21.14,Phase 3,ML-KEM-1024,2025-10-22 16:58:06,2026-02-04 03:30:58
+76,Cardholder Mobile Wallet Provisioning Key,Card Network,ECC,256,High,9.5,5.3,13.45,Phase 3,ML-KEM-768,2024-01-27 03:31:55,2025-03-06 21:36:37
+77,Mobile Banking API Certificate,Internal PKI,ECC,256,High,8.1,4.8,14.36,Phase 3,ML-DSA-65,2024-05-10 02:08:51,2025-04-20 14:07:06
+78,Loyalty Rewards API Certificate,Card Network,ECC,256,Low,8.3,1.9,0.89,Phase 3,ML-DSA-65,2024-04-13 11:52:05,2024-10-19 12:20:10
+79,SWIFT Message Archive Encryption Key,SWIFT,RSA,4096,High,10.2,6.8,16.29,Phase 3,ML-KEM-768,2025-12-05 21:54:11,2025-12-05 21:54:11
+80,Payment Terminal Management Certificate,Card Network,RSA,2048,Medium,7.4,5.1,10.88,Phase 3,ML-DSA-65,2026-05-09 03:43:29,2026-06-30 04:02:29
+81,SWIFT Treasury Messaging Signing Key,SWIFT,ECC,256,High,7.8,5.8,18.30,Phase 3,ML-DSA-65,2026-08-23 18:47:05,2026-08-23 18:47:05
+82,Card Authorization Gateway TLS Certificate,Card Network,ECC,256,High,7.4,5.5,18.29,Phase 3,ML-DSA-65,2026-03-29 12:48:57,2026-09-27 16:47:58
+83,Issuing CA Tier 2,Internal PKI,RSA,4096,High,13.1,7.6,14.03,Phase 3,ML-DSA-65,2024-06-19 00:38:46,2025-07-30 20:48:37
+84,HR Portal TLS Certificate,Internal PKI,RSA,2048,Low,5.5,1.8,1.74,Phase 3,ML-DSA-65,2024-03-19 06:17:31,2024-03-19 06:17:31
+85,Card Data Vault Encryption Key,Card Network,RSA,4096,Critical,14.3,9.0,20.79,Phase 3,ML-KEM-1024,2025-04-29 15:55:11,2026-06-16 04:04:38
+86,Employee Authentication Certificate Authority,Internal PKI,RSA,2048,High,7.4,7.0,23.58,Phase 3,ML-DSA-65,2024-11-15 19:26:51,2025-12-09 05:46:28
+87,Prepaid Card Program Signing Key,Card Network,RSA,2048,Medium,8.3,4.2,7.70,Phase 3,ML-DSA-65,2024-10-03 08:35:18,2026-06-19 14:14:59
+88,SWIFT Local Authentication Key Pair,SWIFT,RSA,1024,Critical,4.0,8.9,76.30,Phase 1,ML-DSA-87,2024-01-29 05:10:10,2024-03-26 14:44:28
+89,SWIFT MT103 Signing Key,SWIFT,RSA,1024,Critical,3.7,9.4,87.28,Phase 1,ML-DSA-87,2024-01-24 20:08:41,2024-01-24 20:08:41
+90,PIN Block Encryption Zone Key,Card Network,RSA,1024,Critical,4.1,9.1,76.11,Phase 1,ML-KEM-1024,2026-02-24 12:08:48,2026-05-09 02:00:33
+91,Card Authorization HSM Key,Card Network,RSA,1024,Critical,3.2,9.3,100.00,Phase 1,ML-KEM-1024,2026-03-09 20:04:01,2026-08-30 10:55:36
+92,SWIFT Sandbox Gateway Certificate,SWIFT,ECC,256,Low,6.9,1.8,1.16,Phase 3,ML-DSA-65,2024-06-14 02:27:20,2026-04-16 11:12:13
+93,Core Banking Database TDE Key,Internal PKI,RSA,1024,Critical,3.6,9.2,87.80,Phase 1,ML-KEM-1024,2026-02-07 22:59:46,2026-07-10 14:49:25
+94,Acquirer Reconciliation Signing Key,Card Network,RSA,2048,Medium,8.0,4.1,7.81,Phase 3,ML-DSA-65,2026-02-26 02:37:17,2026-05-20 16:15:17
+95,SWIFT Alliance Gateway Master Key,SWIFT,RSA,1024,Critical,3.4,9.6,97.12,Phase 1,ML-KEM-1024,2024-12-22 14:51:00,2026-09-30 01:47:44
+96,File Share Encryption Key,Internal PKI,RSA,2048,Medium,8.8,3.9,6.60,Phase 3,ML-KEM-768,2026-09-14 22:56:21,2026-09-14 22:56:21
+97,Disaster Recovery Site Replication Key,Internal PKI,RSA,1024,High,3.4,7.2,54.15,Phase 2,ML-KEM-768,2025-06-23 21:41:03,2025-10-02 17:40:40
+98,SWIFT Audit Log Signing Key,SWIFT,RSA,2048,Medium,7.7,3.9,7.71,Phase 3,ML-DSA-65,2024-01-23 03:28:11,2024-01-23 03:28:11
+99,SWIFT Alert Notification TLS Certificate,SWIFT,ECC,256,Medium,7.2,2.8,5.66,Phase 3,ML-DSA-65,2025-02-01 01:13:49,2025-03-16 01:58:53
+100,SWIFT Payment Release Approval Signing Key,SWIFT,RSA,1024,Critical,4.4,8.1,62.94,Phase 2,ML-DSA-87,2024-05-11 05:49:27,2025-12-23 22:07:34
