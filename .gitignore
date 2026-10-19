@@ -1,3 +1,5 @@
 doc folder/
 .venv/
 .env
+__pycache__/
+*.pyc
